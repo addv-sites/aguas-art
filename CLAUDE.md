@@ -72,10 +72,12 @@ taquerías y marisquerías. **Conversión principal: WhatsApp** (número: `55324
 
 ## Comandos frecuentes
 
-- Servir el sitio en local (una vez construido): `python3 -m http.server 8000` (o abrir `index.html`).
-- Verificar imágenes del PDF: `python3 -c "import pymupdf; ..."` (pymupdf disponible en el entorno).
+- Servir el sitio en local: `python3 -m http.server 8000` (o abrir `index.html`).
+- Verificar catálogo dinámico: editar `data/products.json` (no tocar HTML).
+- Verificar imagen de producto del PDF: `python3 -c "import pymupdf; ..."` (pymupdf disponible en el entorno).
 - OCR de páginas del catálogo: script Swift en `/var/folders/.../T/opencode/ocr.swift` (no versionar).
-- No hay tests/build/lint por definir aún; se agregarán comandos aquí cuando exista el sitio.
+- Validación rápida: `node --check js/*.js` + servir local y revisar consola (sin errores).
+- No hay lint/tests automatizados; QA manual según `QA.md`.
 
 ## Recordatorio
 

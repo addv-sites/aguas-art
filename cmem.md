@@ -60,6 +60,10 @@ Cero preparación · consistencia por botella · sin merma · ticket premium / v
 2. CTAs contextuales con mensaje de WhatsApp prellenado por producto/sección.
 3. Sin precios visibles (no confirmados). Sin testimonios inventados.
 4. Catálogo analizado vía OCR (pymupdf + Vision framework de macOS).
+5. **Diseño base = `stitch/draft.png` + `stitch/DESIGN.md`** (aprobado): logo original del cliente,
+   Montserrat + Pacifico, paleta navy `#062B59`/blue `#4DA9E8`. Build v1 construido (2026-08-19).
+6. Fotos de sabores = recortes reales del PDF oficial (págs. 3–12). Hero/food = dirección Stitch
+   (sustituir por foto real; ver `AI_IMAGE_PROMPTS.md`).
 
 ## PENDIENTES DE CONFIRMAR
 

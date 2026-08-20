@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agua Artesanal | Aguas para tu negocio</title>
+  <meta name="description" content="Aguas artesanales para restaurantes, taquerías y marisquerías. Atención directa por WhatsApp.">
+  <meta name="theme-color" content="#062B59">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#062B59;--navy-dark:#041D3D;--blue:#4DA9E8;--blue-light:#A9DDF4;
+      --ice:#F2FAFD;--white:#fff;--text:#102A43;--whatsapp:#25D366;
+      --gold:#C9A75B;--line:#E4EEF5;--shadow:0 14px 45px rgba(6,43,89,.10);
+      --radius:22px;--max:1480px;
+    }
+    *{box-sizing:border-box}html{scroll-behavior:smooth}
+    body{margin:0;font-family:Montserrat,Arial,sans-serif;color:var(--text);background:#fff}
+    img{max-width:100%;display:block}a{text-decoration:none;color:inherit}
+    .container{width:min(calc(100% - 32px),var(--max));margin:auto}
+    .header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(6,43,89,.08)}
+    .nav{height:82px;display:flex;align-items:center;gap:28px}
+    .brand{width:125px}.navlinks{display:flex;gap:27px;align-items:center;margin-left:auto;font-size:12px;font-weight:700;color:var(--navy)}
+    .navlinks a:hover{color:var(--blue)}
+    .wa{background:var(--whatsapp);color:#fff;border:0;border-radius:999px;padding:13px 20px;font-weight:800;font-size:12px;display:inline-flex;align-items:center;gap:8px;box-shadow:0 7px 20px rgba(37,211,102,.20);cursor:pointer}
+    .wa:hover{filter:brightness(.94);transform:translateY(-1px)}
+    .menu{display:none;background:none;border:0;font-size:25px;color:var(--navy)}
+    .hero{position:relative;overflow:hidden;background:linear-gradient(110deg,#fff 0%,#fff 43%,#f4fbfe 100%);border-radius:0 0 26px 26px}
+    .hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 40%,rgba(169,221,244,.34),transparent 34%),radial-gradient(circle at 20% 20%,rgba(169,221,244,.18),transparent 28%);pointer-events:none}
+    .hero-grid{min-height:500px;display:grid;grid-template-columns:42% 58%;align-items:center;position:relative}
+    .hero-copy{padding:54px 15px 60px 54px;position:relative;z-index:2}
+    h1{font-size:clamp(42px,4.5vw,70px);line-height:.98;margin:0 0 22px;color:var(--navy);font-weight:800;letter-spacing:-2.5px}
+    .script{font-family:Pacifico,cursive;color:var(--blue);font-weight:400;letter-spacing:0}
+    .hero p{font-size:16px;line-height:1.7;max-width:570px;color:#35516a}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+    .outline{border:1.5px solid var(--navy);color:var(--navy);border-radius:999px;padding:12px 24px;font-size:12px;font-weight:800;background:#fff}
+    .hero-visual{height:100%;min-height:500px;display:flex;align-items:center;justify-content:center;position:relative}
+    .hero-visual img{width:100%;height:100%;object-fit:cover;object-position:center;border-radius:24px}
+    .trust{background:var(--ice);border:1px solid #dceff8;display:grid;grid-template-columns:repeat(4,1fr);border-radius:18px;margin:0 auto;padding:18px 24px}
+    .trust-item{display:flex;align-items:center;gap:12px;justify-content:center;text-align:center;font-size:10px;font-weight:800;color:var(--navy);border-right:1px solid #d6e8f2}
+    .trust-item:last-child{border:0}.ico{font-size:24px;color:var(--blue)}
+    section{padding:65px 0}.section-title{text-align:center;color:var(--navy);font-size:30px;margin:0 0 8px;font-weight:800}
+    .section-sub{text-align:center;color:#648097;margin:0 0 32px;font-size:13px}
+    .products{position:relative}.product-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+    .product{border:1px solid var(--line);border-radius:17px;padding:10px;background:#fff;box-shadow:0 8px 28px rgba(6,43,89,.06);transition:.3s}
+    .product:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .product img{height:180px;width:100%;object-fit:cover;border-radius:12px;background:var(--ice)}
+    .product h3{font-size:12px;text-align:center;color:var(--navy);margin:10px 0 3px}
+    .product p{font-size:10px;text-align:center;margin:0;color:#698095}
+    .product-wa{display:flex;justify-content:center;margin-top:8px}.product-wa a{font-size:10px;color:#1c9f4b;font-weight:800}
+    .business{background:#fbfdfe}.business-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+    .business-copy{padding:38px;background:#fff;border-radius:24px;box-shadow:var(--shadow)}
+    .business-copy h2{font-size:34px;line-height:1.05;color:var(--navy);margin:0 0 24px}
+    .business-item{display:grid;grid-template-columns:45px 1fr;gap:15px;margin:20px 0}.business-item .icon{width:45px;height:45px;border-radius:50%;display:grid;place-items:center;background:var(--ice);color:var(--navy);font-size:20px}
+    .business-item strong{font-size:13px;color:var(--navy)}.business-item p{font-size:12px;line-height:1.55;color:#60798e;margin:4px 0}
+    .food{border-radius:24px;overflow:hidden;min-height:460px}.food img{width:100%;height:100%;object-fit:cover}
+    .why{background:var(--navy);color:#fff;border-radius:28px;overflow:hidden}.why-inner{padding:50px 38px}
+    .why h2{margin:0 0 25px;font-size:32px}.why h2 span{color:var(--blue-light)}
+    .why-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}.why-card{border-right:1px solid rgba(255,255,255,.14);padding:4px 14px}.why-card:last-child{border:0}.why-card .big{font-size:23px;color:var(--blue-light)}.why-card h3{font-size:12px;margin:9px 0}.why-card p{font-size:10px;line-height:1.5;color:#c8d9e7}
+    .process{background:#fff}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{background:#f8fbfd;border:1px solid var(--line);border-radius:17px;padding:24px;position:relative}.step-number{font-size:25px;font-weight:800;color:var(--blue)}.step h3{font-size:13px;color:var(--navy)}.step p{font-size:11px;color:#617a8d;line-height:1.5}
+    .cta{background:linear-gradient(105deg,var(--navy),#0a4b83);border-radius:25px;color:#fff;padding:35px 42px;display:flex;align-items:center;justify-content:space-between;gap:30px;overflow:hidden}.cta h2{margin:0 0 8px;font-size:28px}.cta p{margin:0;color:#d7e7f2;font-size:12px}
+    footer{background:var(--navy);color:#fff;margin-top:60px;padding:32px 0}.footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;align-items:center;gap:25px}.footer-logo{filter:brightness(0) invert(1);max-width:125px}.footer-label{font-size:9px;color:#9fc3dd;font-weight:700;text-transform:uppercase}.footer-value{font-size:12px;margin-top:4px}.footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:25px;padding-top:16px;font-size:9px;color:#9fb8ca;display:flex;justify-content:space-between}
+    .floating-wa{display:none}
+    .fade{opacity:0;transform:translateY(20px);transition:.65s ease}.fade.visible{opacity:1;transform:none}
+    @media(max-width:1000px){.navlinks{gap:15px}.hero-grid{grid-template-columns:1fr 1fr}.hero-copy{padding-left:28px}h1{font-size:46px}.product-grid{grid-template-columns:repeat(3,1fr)}.why-grid{grid-template-columns:repeat(3,1fr)}.why-card:nth-child(3){border:0}.footer-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:760px){
+      .container{width:min(calc(100% - 22px),600px)}.nav{height:70px;justify-content:space-between}.brand{width:100px}.navlinks{display:none}.menu{display:block;order:-1}.header .wa{font-size:0;padding:10px;width:40px;height:40px;justify-content:center}.header .wa:before{content:"◉";font-size:17px}
+      .hero-grid{display:flex;flex-direction:column;min-height:0}.hero-copy{padding:35px 22px 20px;text-align:center}.hero p{font-size:13px}.hero-actions{justify-content:center}.hero-visual{min-height:300px;width:100%}.hero-visual img{height:320px;border-radius:0;object-fit:cover}
+      h1{font-size:39px;letter-spacing:-1.5px}.trust{grid-template-columns:repeat(2,1fr);gap:0;padding:8px}.trust-item{min-height:65px;font-size:8px;border-right:1px solid #d6e8f2}.trust-item:nth-child(2){border-right:0}.trust-item:nth-child(-n+2){border-bottom:1px solid #d6e8f2}
+      section{padding:48px 0}.section-title{font-size:25px}.product-grid{grid-template-columns:repeat(2,1fr);gap:10px}.product img{height:150px}
+      .business-grid{grid-template-columns:1fr}.business-copy{padding:25px}.business-copy h2{font-size:28px}.food{min-height:300px}.why{border-radius:22px}.why-inner{padding:32px 20px}.why-grid{grid-template-columns:1fr 1fr}.why-card{border-bottom:1px solid rgba(255,255,255,.14);border-right:0;padding:15px 4px}.steps{grid-template-columns:1fr 1fr}.cta{padding:28px 22px;display:block;text-align:center}.cta .wa{margin-top:18px}.footer-grid{grid-template-columns:1fr 1fr}.footer-bottom{display:block;line-height:1.8}
+      .floating-wa{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:60;justify-content:center}.floating-wa .wa{width:100%;justify-content:center}
+    }
+    @media(max-width:430px){.hero-copy{padding-top:28px}.hero-visual img{height:280px}.product img{height:135px}.steps{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.why-grid{grid-template-columns:1fr}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.fade{opacity:1;transform:none;transition:none}.product:hover,.wa:hover{transform:none}}
+  </style>
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <button class="menu" aria-label="Abrir menú">☰</button>
+    <a href="#inicio" class="brand"><img src="assets/logo-transparent.png" alt="Agua Artesanal"></a>
+    <nav class="navlinks" aria-label="Navegación principal">
+      <a href="#inicio">INICIO</a><a href="#productos">PRODUCTOS</a><a href="#beneficios">BENEFICIOS</a><a href="#porque">¿POR QUÉ ELEGIRNOS?</a><a href="#testimonios">TESTIMONIOS</a><a href="#contacto">CONTACTO</a>
+    </nav>
+    <a class="wa" target="_blank" rel="noopener" href="https://wa.me/525532400172?text=Hola%2C%20vi%20el%20sitio%20de%20Agua%20Artesanal%20y%20quiero%20conocer%20sus%20sabores%20y%20opciones%20para%20mi%20negocio.">◉ PEDIR POR WHATSAPP</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy fade">
+        <h1>Dale a tus clientes<br><span class="script">algo que quieran</span><br>volver a pedir</h1>
+        <p>Aguas artesanales de alta calidad para restaurantes, taquerías, marisquerías y negocios que buscan lo mejor para sus clientes.</p>
+        <div class="hero-actions">
+          <a class="wa" target="_blank" href="https://wa.me/525532400172?text=Hola%2C%20vi%20el%20sitio%20de%20Agua%20Artesanal%20y%20quiero%20conocer%20sus%20sabores.">◉ PEDIR POR WHATSAPP</a>
+          <a class="outline" href="#productos">VER SABORES</a>
+        </div>
+      </div>
+      <div class="hero-visual fade"><img src="assets/hero-products.png" alt="Aguas artesanales y bebidas frescas" fetchpriority="high"></div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="trust fade">
+      <div class="trust-item"><span class="ico">♢</span><span>CALIDAD<br>EN CADA GOTA</span></div>
+      <div class="trust-item"><span class="ico">♧</span><span>ATENCIÓN<br>PERSONALIZADA</span></div>
+      <div class="trust-item"><span class="ico">⌁</span><span>VARIEDAD<br>DE SABORES</span></div>
+      <div class="trust-item"><span class="ico">✦</span><span>ATENCIÓN<br>POR WHATSAPP</span></div>
+    </div>
+  </div>
+
+  <section id="productos">
+    <div class="container">
+      <h2 class="section-title">NUESTROS SABORES</h2>
+      <p class="section-sub">La presentación ideal para cada necesidad</p>
+      <div class="product-grid">
+        <article class="product fade"><img src="assets/flavor-jamaica.png" alt="Agua artesanal Jamaica"><h3>JAMAICA</h3><p>Presentación por confirmar</p><div class="product-wa"><a href="https://wa.me/525532400172?text=Hola%2C%20me%20interesa%20Jamaica.%20Quiero%20conocer%20disponibilidad%20y%20precio.">WhatsApp ↗</a></div></article>
+        <article class="product fade"><img src="assets/flavor-horchata.png" alt="Agua artesanal Horchata"><h3>HORCHATA</h3><p>Presentación por confirmar</p><div class="product-wa"><a href="https://wa.me/525532400172?text=Hola%2C%20me%20interesa%20Horchata.%20Quiero%20conocer%20disponibilidad%20y%20precio.">WhatsApp ↗</a></div></article>
+        <article class="product fade"><img src="assets/flavor-tamarindo.png" alt="Agua artesanal Tamarindo"><h3>TAMARINDO</h3><p>Presentación por confirmar</p><div class="product-wa"><a href="https://wa.me/525532400172?text=Hola%2C%20me%20interesa%20Tamarindo.%20Quiero%20conocer%20disponibilidad%20y%20precio.">WhatsApp ↗</a></div></article>
+        <article class="product fade"><img src="assets/flavor-limon-chia.png" alt="Agua artesanal Limón con Chía"><h3>LIMÓN CON CHÍA</h3><p>Presentación por confirmar</p><div class="product-wa"><a href="https://wa.me/525532400172?text=Hola%2C%20me%20interesa%20Limón%20con%20Chía.%20Quiero%20conocer%20disponibilidad%20y%20precio.">WhatsApp ↗</a></div></article>
+        <article class="product fade"><img src="assets/flavor-maracuya.png" alt="Agua artesanal Maracuyá"><h3>MARACUYÁ</h3><p>Presentación por confirmar</p><div class="product-wa"><a href="https://wa.me/525532400172?text=Hola%2C%20me%20interesa%20Maracuyá.%20Quiero%20conocer%20disponibilidad%20y%20precio.">WhatsApp ↗</a></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="business" id="beneficios">
+    <div class="container business-grid">
+      <div class="business-copy fade">
+        <h2>HECHAS PARA<br>TU NEGOCIO</h2>
+        <div class="business-item"><div class="icon">♧</div><div><strong>RESTAURANTES</strong><p>Complementa la experiencia gastronómica.</p></div></div>
+        <div class="business-item"><div class="icon">▦</div><div><strong>TAQUERÍAS</strong><p>El acompañamiento perfecto para cada orden.</p></div></div>
+        <div class="business-item"><div class="icon">◒</div><div><strong>MARISQUERÍAS</strong><p>Sabores que realzan el sabor del mar.</p></div></div>
+      </div>
+      <div class="food fade"><img src="assets/food-drink.png" alt="Bebida artesanal acompañando comida mexicana" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section id="porque">
+    <div class="container why fade">
+      <div class="why-inner">
+        <h2>¿POR QUÉ ELEGIR <span>AGUA ARTESANAL?</span></h2>
+        <div class="why-grid">
+          <div class="why-card"><div class="big">✧</div><h3>CALIDAD PREMIUM</h3><p>Presentación cuidada para tu negocio.</p></div>
+          <div class="why-card"><div class="big">◌</div><h3>VARIEDAD DE SABORES</h3><p>Opciones para diferentes gustos y menús.</p></div>
+          <div class="why-card"><div class="big">▣</div><h3>PRESENTACIÓN IDEAL</h3><p>Opciones adaptables a tu operación.</p></div>
+          <div class="why-card"><div class="big">♧</div><h3>SERVICIO CONFIABLE</h3><p>Atención cercana y directa.</p></div>
+          <div class="why-card"><div class="big">◇</div><h3>RELACIÓN CALIDAD-PRECIO</h3><p>Una propuesta pensada para negocios.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process">
+    <div class="container">
+      <h2 class="section-title">PEDIR ES ASÍ DE FÁCIL</h2>
+      <p class="section-sub">Una conversación directa para comenzar.</p>
+      <div class="steps">
+        <div class="step fade"><div class="step-number">01</div><h3>Elige tus sabores</h3><p>Revisa las opciones disponibles y cuéntanos qué buscas.</p></div>
+        <div class="step fade"><div class="step-number">02</div><h3>Escríbenos por WhatsApp</h3><p>Inicia la conversación directamente con nuestro equipo.</p></div>
+        <div class="step fade"><div class="step-number">03</div><h3>Confirmamos tu pedido</h3><p>Te ayudamos con disponibilidad y detalles.</p></div>
+        <div class="step fade"><div class="step-number">04</div><h3>Recibe tu pedido</h3><p>La entrega se acuerda directamente por WhatsApp.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="container cta fade">
+      <div><h2>¿LISTO PARA OFRECER ALGO DIFERENTE?</h2><p>Escríbenos por WhatsApp y recibe atención directa.</p></div>
+      <a class="wa" target="_blank" href="https://wa.me/525532400172?text=Hola%2C%20vi%20el%20sitio%20de%20Agua%20Artesanal%20y%20quiero%20informaci%C3%B3n%20para%20mi%20negocio.">◉ PEDIR POR WHATSAPP</a>
+    </div>
+  </section>
+</main>
+
+<footer id="testimonios">
+  <div class="container">
+    <div class="footer-grid">
+      <img class="footer-logo" src="assets/logo-transparent.png" alt="Agua Artesanal">
+      <div><div class="footer-label">WhatsApp</div><div class="footer-value">55 3240 0172</div></div>
+      <div><div class="footer-label">Correo</div><div class="footer-value">Javieresp403@gmail.com</div></div>
+      <div><div class="footer-label">Facebook</div><div class="footer-value"><a href="https://www.facebook.com/profile.php?id=100071090715762" target="_blank">Agua Artesanal</a></div></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Agua Artesanal. Todos los derechos reservados.</span><span>Venta en línea · Atención por WhatsApp</span></div>
+  </div>
+</footer>
+
+<div class="floating-wa">
+  <a class="wa" target="_blank" href="https://wa.me/525532400172?text=Hola%2C%20vi%20el%20sitio%20de%20Agua%20Artesanal%20y%20quiero%20hacer%20una%20consulta.">◉ PEDIR POR WHATSAPP</a>
+</div>
+
+<script>
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
+  },{threshold:.12});
+  document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Agua Artesanal">
+  <rect width="64" height="64" rx="14" fill="#062B59"/>
+  <path d="M32 8c9 12 16 20.5 16 30a16 16 0 1 1-32 0c0-9.5 7-18 16-30z" fill="#4DA9E8"/>
+  <path d="M32 22c6 8 10 13.5 10 19a10 10 0 1 1-20 0c0-5.5 4-11 10-19z" fill="#A9DDF4"/>
+</svg>

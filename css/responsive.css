@@ -35,6 +35,7 @@
 }
 
 @media (max-width:760px){
+  body{padding-bottom:84px}
   .container{width:min(calc(100% - 24px),620px)}
   .nav{height:70px;justify-content:space-between;gap:0}
   .brand{width:96px}

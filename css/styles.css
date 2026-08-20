@@ -13,10 +13,13 @@
   --white:#FFFFFF;
   --text:#102A43;
   --whatsapp:#25D366;
-  --whatsapp-dark:#1DA851;
+  --wa-btn:#177E44;
+  --wa-btn-hover:#14663A;
   --gold:#C9A75B;
   --botanical:#8DBB91;
+  --botanical-strong:#4E7A5A;
   --coral:#E9A9A2;
+  --muted:#587290;
   --line:#E4EEF5;
   --shadow:0 14px 45px rgba(6,43,89,.10);
   --shadow-lg:0 24px 60px rgba(6,43,89,.14);
@@ -63,7 +66,7 @@ section{padding:72px 0}
 }
 .section-sub{
   text-align:center;
-  color:#648097;
+  color:var(--muted);
   margin:0 auto 40px;
   font-size:14px;
   max-width:640px;
@@ -87,9 +90,9 @@ section{padding:72px 0}
 }
 .btn:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 .btn-wa{
-  background:var(--whatsapp);
+  background:var(--wa-btn);
   color:var(--white);
-  box-shadow:0 8px 22px rgba(37,211,102,.25);
+  box-shadow:0 8px 22px rgba(23,126,68,.28);
 }
 .btn-wa:hover{filter:brightness(.93);transform:translateY(-2px)}
 .btn-outline{
@@ -255,19 +258,19 @@ h1{
   z-index:2;
 }
 .product h3{font-size:13px;text-align:center;color:var(--navy);margin:12px 0 4px;font-weight:800;font-family:var(--font-head)}
-.product .product-size{font-size:10px;text-align:center;margin:0 0 4px;color:#698095;line-height:1.4}
-.product .product-dur{font-size:10px;text-align:center;margin:0 0 10px;color:var(--botanical);font-weight:700}
+.product .product-size{font-size:10px;text-align:center;margin:0 0 4px;color:var(--muted);line-height:1.4}
+.product .product-dur{font-size:10px;text-align:center;margin:0 0 10px;color:var(--botanical-strong);font-weight:700}
 .product-wa{display:flex;justify-content:center;margin-top:auto}
 .product-wa a{
   font-size:11px;
-  color:#1c9f4b;
+  color:var(--wa-btn);
   font-weight:800;
   display:inline-flex;
   align-items:center;
   gap:6px;
   padding:6px 2px;
 }
-.product-wa a:hover{color:var(--whatsapp-dark)}
+.product-wa a:hover{color:var(--wa-btn-hover)}
 
 /* ---------- Hechas para tu negocio ---------- */
 .business{background:#fbfdfe}
@@ -325,9 +328,9 @@ h1{
   transition:transform .3s ease, box-shadow .3s ease;
 }
 .step:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-.step-number{font-size:28px;font-weight:800;color:var(--blue);font-family:var(--font-head);letter-spacing:-1px}
+.step-number{font-size:28px;font-weight:800;color:#2878AE;font-family:var(--font-head);letter-spacing:-1px}
 .step h3{font-size:14px;color:var(--navy);margin:14px 0 8px;font-weight:800}
-.step p{font-size:12px;color:#617a8d;line-height:1.6;margin:0}
+.step p{font-size:12px;color:var(--muted);line-height:1.6;margin:0}
 
 /* ---------- FAQ ---------- */
 .faq-list{max-width:820px;margin:0 auto}
@@ -360,7 +363,7 @@ h1{
 .faq-q .faq-icon{font-size:20px;color:var(--blue);transition:transform .3s ease;flex:none}
 .faq-item.open .faq-icon{transform:rotate(45deg)}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
-.faq-a-inner{padding:0 24px 22px;font-size:13px;color:#617a8d;line-height:1.7}
+.faq-a-inner{padding:0 24px 22px;font-size:13px;color:var(--muted);line-height:1.7}
 .faq-a-inner a{color:var(--blue);font-weight:700}
 .faq-a-inner a:hover{text-decoration:underline}
 

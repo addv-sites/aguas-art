@@ -27,7 +27,7 @@ function productCard(p) {
       <p class="product-size">${escapeHtml(p.size)}</p>
       <p class="product-dur">Tiempo garantizado: ${escapeHtml(p.duration)}</p>
       <div class="product-wa">
-        <a href="${link}" target="_blank" rel="noopener" data-wa-product="${escapeHtml(p.name)}">Pedir por WhatsApp ↗</a>
+        <a href="${link}" target="_blank" rel="noopener" data-wa-product="${escapeHtml(p.name)}">Pedir por WhatsApp <svg class="prod-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
     </article>`;
 }

@@ -127,9 +127,10 @@ section{padding:72px 0}
 .header .btn{margin-left:8px;flex:none}
 .menu{
   display:none;
-  background:none;border:0;font-size:26px;color:var(--navy);
+  background:none;border:0;color:var(--navy);
   cursor:pointer;padding:6px;line-height:1;
 }
+.menu svg{width:26px;height:26px;display:block}
 
 /* ---------- Hero ---------- */
 .hero{
@@ -200,7 +201,15 @@ h1{
   line-height:1.35;
 }
 .trust-item:last-child{border-right:0}
-.trust-item .ico{font-size:22px;color:var(--blue);flex:none}
+.trust-item .ico{
+  width:38px;height:38px;flex:none;
+  display:grid;place-items:center;
+  background:rgba(77,169,232,.12);
+  border:1px solid rgba(77,169,232,.18);
+  border-radius:11px;
+  color:var(--blue);
+}
+.trust-item .ico svg{width:20px;height:20px;display:block}
 
 /* ---------- Productos ---------- */
 .products{position:relative;background:var(--white)}
@@ -271,6 +280,7 @@ h1{
   padding:6px 2px;
 }
 .product-wa a:hover{color:var(--wa-btn-hover)}
+.product-wa a svg{width:12px;height:12px;flex:none}
 
 /* ---------- Hechas para tu negocio ---------- */
 .business{background:#fbfdfe}
@@ -284,10 +294,16 @@ h1{
 .business-copy h2{font-size:clamp(28px,3vw,38px);line-height:1.05;color:var(--navy);margin:0 0 26px;font-weight:800;letter-spacing:-.5px;font-family:var(--font-head)}
 .business-item{display:grid;grid-template-columns:50px 1fr;gap:16px;margin:22px 0}
 .business-item .icon{
-  width:50px;height:50px;border-radius:50%;
+  width:52px;height:52px;border-radius:50%;
   display:grid;place-items:center;
-  background:var(--ice);color:var(--navy);font-size:22px;
+  background:linear-gradient(145deg,#edf8fd,#d9eef9);
+  border:1px solid rgba(77,169,232,.20);
+  box-shadow:0 6px 16px rgba(6,43,89,.08);
+  color:var(--navy);
+  transition:transform .25s ease, box-shadow .25s ease;
 }
+.business-item .icon svg{width:24px;height:24px}
+.business-item:hover .icon{transform:translateY(-2px) scale(1.04);box-shadow:0 10px 20px rgba(6,43,89,.12)}
 .business-item strong{font-size:13px;color:var(--navy);text-transform:uppercase;letter-spacing:.04em}
 .business-item p{font-size:13px;line-height:1.6;color:#60798e;margin:4px 0 0}
 .food{
@@ -312,7 +328,17 @@ h1{
 .why-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
 .why-card{border-right:1px solid rgba(255,255,255,.14);padding:6px 16px 6px 4px}
 .why-card:last-child{border-right:0}
-.why-card .big{font-size:26px;color:var(--blue-light)}
+.why-card .big{
+  width:46px;height:46px;border-radius:50%;
+  display:grid;place-items:center;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.16);
+  color:var(--blue-light);
+  box-shadow:0 8px 18px rgba(4,29,61,.25);
+  transition:transform .25s ease, background .25s ease;
+}
+.why-card .big svg{width:22px;height:22px}
+.why-card:hover .big{transform:translateY(-2px);background:rgba(255,255,255,.14)}
 .why-card h3{font-size:12px;margin:12px 0 8px;font-weight:800;letter-spacing:.02em}
 .why-card p{font-size:11px;line-height:1.55;color:#c8d9e7;margin:0}
 
@@ -360,8 +386,16 @@ h1{
   gap:16px;
 }
 .faq-q:hover{color:var(--blue)}
-.faq-q .faq-icon{font-size:20px;color:var(--blue);transition:transform .3s ease;flex:none}
-.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-q .faq-icon{
+  width:28px;height:28px;flex:none;
+  display:grid;place-items:center;
+  border-radius:50%;
+  background:var(--ice);
+  color:var(--blue);
+  transition:transform .3s ease, background .3s ease, color .3s ease;
+}
+.faq-q .faq-icon svg{width:16px;height:16px;display:block}
+.faq-item.open .faq-icon{transform:rotate(45deg);background:var(--navy);color:var(--white)}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
 .faq-a-inner{padding:0 24px 22px;font-size:13px;color:var(--muted);line-height:1.7}
 .faq-a-inner a{color:var(--blue);font-weight:700}

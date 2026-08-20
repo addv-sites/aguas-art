@@ -6,7 +6,7 @@
     "size": "PET reciclable · 1 L y 500 ml",
     "description": "Refrescante y natural. Vitaminas del complejo B; ayuda a regular la presión arterial.",
     "duration": "3 días",
-    "image": "/assets/images/flavors/sandia.webp",
+    "image": "assets/images/flavors/sandia.webp",
     "featured": true,
     "badge": "Nuevo",
     "available": true
@@ -18,7 +18,7 @@
     "size": "PET reciclable · 1 L y 500 ml",
     "description": "El clásico mexicano. Vitaminas del complejo B; ayuda a regular la presión arterial.",
     "duration": "10 días",
-    "image": "/assets/images/flavors/jamaica.webp",
+    "image": "assets/images/flavors/jamaica.webp",
     "featured": false,
     "badge": null,
     "available": true
@@ -30,7 +30,7 @@
     "size": "PET reciclable · 1 L y 500 ml",
     "description": "Dulce y ácido. Vitaminas A, C y complejo B; proteínas, calcio, fósforo, potasio y magnesio.",
     "duration": "10 días",
-    "image": "/assets/images/flavors/tamarindo.webp",
+    "image": "assets/images/flavors/tamarindo.webp",
     "featured": false,
     "badge": null,
     "available": true
@@ -42,7 +42,7 @@
     "size": "PET reciclable · 1 L y 500 ml",
     "description": "Cremosa y tradicional. Ayuda en el proceso digestivo y mejora la salud cardiovascular.",
     "duration": "5 días",
-    "image": "/assets/images/flavors/horchata.webp",
+    "image": "assets/images/flavors/horchata.webp",
     "featured": false,
     "badge": null,
     "available": true
@@ -54,7 +54,7 @@
     "size": "PET reciclable · 1 L y 500 ml",
     "description": "Frescura con textura. Vitaminas y minerales como potasio, ácido fólico y vitaminas B.",
     "duration": "3 días",
-    "image": "/assets/images/flavors/limon-chia.webp",
+    "image": "assets/images/flavors/limon-chia.webp",
     "featured": false,
     "badge": null,
     "available": true
@@ -66,7 +66,7 @@
     "size": "PET reciclable · 1 L y 500 ml",
     "description": "Suave y tropical. Ácido fólico y vitaminas del complejo B.",
     "duration": "5 días",
-    "image": "/assets/images/flavors/coco.webp",
+    "image": "assets/images/flavors/coco.webp",
     "featured": false,
     "badge": null,
     "available": true
@@ -78,7 +78,7 @@
     "size": "PET reciclable · 1 L y 500 ml",
     "description": "Sabor tropical sin complicaciones. Contiene zinc y selenio, minerales antioxidantes.",
     "duration": "5 días",
-    "image": "/assets/images/flavors/pina-colada.webp",
+    "image": "assets/images/flavors/pina-colada.webp",
     "featured": false,
     "badge": null,
     "available": true
@@ -90,7 +90,7 @@
     "size": "PET reciclable · 1 L y 500 ml",
     "description": "Cítrica y natural. Vitamina C y A; fibra soluble e insoluble; combate la anemia.",
     "duration": "3 días",
-    "image": "/assets/images/flavors/naranja.webp",
+    "image": "assets/images/flavors/naranja.webp",
     "featured": false,
     "badge": null,
     "available": true
@@ -102,7 +102,7 @@
     "size": "PET reciclable · 1 L y 500 ml",
     "description": "Dulce inconfundible. Ayuda a prevenir la diabetes y alivia fatiga y dolores musculares.",
     "duration": "5 días",
-    "image": "/assets/images/flavors/mazapan.webp",
+    "image": "assets/images/flavors/mazapan.webp",
     "featured": false,
     "badge": null,
     "available": true
@@ -114,7 +114,7 @@
     "size": "PET reciclable · 1 L y 500 ml",
     "description": "Energía y fibra. Absorbe niveles de glucosa en sangre y depura el organismo.",
     "duration": "5 días",
-    "image": "/assets/images/flavors/avena-nuez.webp",
+    "image": "assets/images/flavors/avena-nuez.webp",
     "featured": false,
     "badge": null,
     "available": true

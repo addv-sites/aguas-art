@@ -10,6 +10,12 @@ taquerías y marisquerías. **Conversión principal: WhatsApp** (número: `55324
 - **Sitio estático** para GitHub Pages. Sin backend, sin Docker, sin base de datos, sin frameworks
   pesados. Stack objetivo: HTML5 + CSS3 + JS vanilla (+ `data/products.json`, Lucide Icons).
 - Repo remoto: `https://github.com/addv-sites/aguas-art` (rama `main`).
+- **Producción:** https://addv-sites.github.io/aguas-art/ — deploy automático en cada push a `main`
+  vía `.github/workflows/pages.yml` (Acciones GitHub, sin build previo). Las rutas de imágenes
+  dentro de `data/products.json` deben ser **relativas** (`assets/...`, sin `/` inicial) por la
+  subruta `/aguas-art/`.
+- **Lighthouse (objetivo cumplido):** Performance ≥ 90 · Accessibility ≥ 95 · Best Practices ≥ 95 ·
+  SEO ≥ 95. Auditoría actual: 93 / 100 / 100 / 100.
 
 ## Fuentes de verdad
 

@@ -67,6 +67,11 @@ Cero preparación · consistencia por botella · sin merma · ticket premium / v
 7. **Revisión técnica completada** (headless Chrome, 4 viewports + interacciones): sin overflow,
    filtros y FAQ funcionales, 19 enlaces wa.me, contraste WCAG AA corregido (botones WhatsApp
    `#177E44`, textos secundarios ≥4.5:1). Prototipo servido en local para revisión del cliente.
+8. **En producción**: GitHub Pages habilitado → https://addv-sites.github.io/aguas-art/.
+   Deploy automático vía `.github/workflows/pages.yml` (deploy-pages@v4) en cada push a `main`.
+   Lighthouse post-deploy: P 93 / A11y 100 / BP 100 / SEO 100. Bug crítico resuelto: rutas de
+   imágenes de `products.json` ahora son relativas (el modo absoluto fallaba bajo la subruta
+   `/aguas-art/`).
 
 ## PENDIENTES DE CONFIRMAR
 

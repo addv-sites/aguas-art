@@ -75,12 +75,24 @@ Ejecutada con headless Chrome en viewports 320/375/768/1440 + harness de interac
 
 ## Pendientes (Fase 4/5)
 
-- [ ] Feedback visual del cliente sobre el prototipo en navegador.
+- [x] Habilitar GitHub Pages → **https://addv-sites.github.io/aguas-art/** (deploy automático vía workflow).
+- [x] Auditoría Lighthouse post-deploy: **Performance 93 · Accessibility 100 · Best Practices 100 · SEO 100**
+      (objetivo P ≥ 90, resto ≥ 95 — CUMPLIDO). TBT 0 ms, CLS 0.
+- [x] Auditoría accesibilidad (axe/Lighthouse): **100, sin violaciones**.
+- [ ] Feedback visual del cliente sobre el prototipo en navegador (http://localhost:8000).
 - [ ] Sustituir `hero-products.webp` y `food-drink.webp` por fotografía real premium
       (ver `AI_IMAGE_PROMPTS.md`).
-- [ ] Auditoría Lighthouse post-deploy (objetivo P ≥ 90, resto ≥ 95).
-- [ ] Auditoría accesibilidad (axe/pa11y) post-deploy.
-- [ ] Habilitar GitHub Pages + registrar en Search Console.
+- [ ] Registrar en Google Search Console y enviar sitemap.
+
+### Deploy (2026-08-19) — bug crítico corregido
+
+- En GitHub Pages el sitio vive en la subruta `/aguas-art/`: las rutas absolutas
+  `/assets/...` de `data/products.json` resolvían a 404 (fuera del subdirectorio).
+  **Fix:** rutas relativas (`assets/...`) en `products.json`.
+- El modo legacy de Pages no re-desplegaba en cada push → se creó
+  `.github/workflows/pages.yml` (deploy automático con `actions/deploy-pages@v4`).
+- Corregido además: contraste de `.section-eyebrow` (`#4DA9E8`→`#2878AE`, 2.57→4.79:1)
+  y aspect ratio del logo del footer (`height:auto`).
 
 ## Reglas críticas del proyecto
 

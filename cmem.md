@@ -5,7 +5,7 @@
 
 ## Contacto / canales (oficiales)
 
-- **WhatsApp:** `5532400172` (brief) — ⚠️ catálogo muestra `5615136270` → **PENDIENTE DE CONFIRMAR**.
+- **WhatsApp:** `5532400172` — ✅ CONFIRMADO (fuente: brief `cat/mp.md`, decisión del cliente 2026-08-19). El catálogo muestra `5615136270`, pero NO se usa.
 - **Correo:** Javieresp403@gmail.com
 - **Facebook:** https://www.facebook.com/profile.php?id=100071090715762 · Instagram/Redes: `@aguaartesanal`
 - **Modelo:** venta en línea 100%, conversión por WhatsApp. Sin punto de venta físico.
@@ -63,7 +63,7 @@ Cero preparación · consistencia por botella · sin merma · ticket premium / v
 
 ## PENDIENTES DE CONFIRMAR
 
-- [ ] WhatsApp correcto (5532400172 vs 5615136270).
-- [ ] Vigencia del sabor sandía.
-- [ ] Entregas / pedido mínimo / muestras / cobertura / pagos.
-- [ ] Aprobación del diferenciador y de la propuesta completa.
+- [x] WhatsApp correcto → **`5532400172`** (brief). Confirmado por el cliente.
+- [x] Vigencia del sabor sandía (temporada) → **Confirmado**.
+- [x] Aprobación del diferenciador y de la propuesta completa → **Confirmado**.
+- [ ] Condiciones de operación: entregas / pedido mínimo / muestras / cobertura / pagos → **PENDIENTE**. El sitio remitirá a WhatsApp sin inventar datos.

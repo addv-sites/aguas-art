@@ -5,7 +5,7 @@ Contexto operativo persistente del repo para cualquier sesión futura de Claude 
 ## Qué es este proyecto
 
 One Page B2B de **Agua Artesanal** (CDMX) para vender aguas artesanales a restaurantes,
-taquerías y marisquerías. **Conversión principal: WhatsApp** (número: `5532400172`, a confirmar).
+taquerías y marisquerías. **Conversión principal: WhatsApp** (número: `5532400172`, confirmado).
 
 - **Sitio estático** para GitHub Pages. Sin backend, sin Docker, sin base de datos, sin frameworks
   pesados. Stack objetivo: HTML5 + CSS3 + JS vanilla (+ `data/products.json`, Lucide Icons).

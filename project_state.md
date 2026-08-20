@@ -39,12 +39,11 @@ producto terminado. Eje de copy, hero y sección de beneficios.
 
 ## Pendiente de confirmar por el cliente
 
-1. **Número de WhatsApp correcto**: brief `5532400172` vs catálogo `5615136270`. Definir cuál recibe pedidos.
-2. **Sabor de temporada "Sandía"**: confirmar que sigue vigente (se lanzaría como "Nuevo").
-3. **Condiciones de operación** (no aparecen en catálogo): entregas, pedido mínimo, muestras, cobertura,
-   condiciones de pago. Si existen → se documentan; si no → el sitio remite a WhatsApp sin inventar.
-4. **Precios**: no existen en catálogo → el sitio NO mostrará precios (CTA "Quiero cotizar").
-5. **Aprobación del diferenciador** como eje central del sitio.
+1. **Número de WhatsApp correcto**: ✅ **CONFIRMADO** — `5532400172` (fuente: brief mp.md, decisión del cliente 2026-08-19). El número `5615136270` del catálogo NO se usa.
+2. **Sabor de temporada "Sandía"**: ✅ **CONFIRMADO** — se lanzará como "Nuevo".
+3. **Condiciones de operación** (entregas, pedido mínimo, muestras, cobertura, pagos): **PENDIENTE** — el sitio remitirá a WhatsApp sin inventar datos.
+4. **Precios**: no existen en catálogo → el sitio NO mostrará precios (CTA "Quiero cotizar"). (Aceptado implícitamente con la propuesta.)
+5. **Diferenciador "ya preparada, cero complicación"**: ✅ **CONFIRMADO** como eje central del sitio.
 
 ## Próximos pasos (secuencia propuesta)
 

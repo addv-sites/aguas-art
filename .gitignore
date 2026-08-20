@@ -1,0 +1,11 @@
+# Dependencias del sistema / OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+
+# Archivos temporales del catálogo (grandes, regenerables)
+# Nota: el catálogo PDF fuente se mantiene versionado en cat/ por ahora.

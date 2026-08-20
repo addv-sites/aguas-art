@@ -411,16 +411,6 @@ footer{background:var(--navy-dark);color:var(--white);margin-top:70px;padding:44
   flex-wrap:wrap;
 }
 
-/* ---------- WhatsApp flotante ---------- */
-.floating-wa{
-  display:none;
-  position:fixed;
-  left:14px;right:14px;bottom:14px;
-  z-index:60;
-  justify-content:center;
-}
-.floating-wa .btn{width:100%;justify-content:center;padding:16px}
-
 /* ---------- Animaciones ---------- */
 .fade{opacity:0;transform:translateY(22px);transition:opacity .65s ease, transform .65s ease}
 .fade.visible{opacity:1;transform:none}

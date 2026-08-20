@@ -80,7 +80,6 @@
   .step{padding:22px 18px}
   .footer-grid{grid-template-columns:1fr 1fr;gap:22px}
   .footer-bottom{display:block;line-height:1.9}
-  .floating-wa{display:flex}
   .cta{border-radius:22px}
   .faq-q{font-size:13px;padding:18px}
 }

@@ -51,9 +51,31 @@ a restaurantes, taquerías y marisquerías. **La conversión principal es WhatsA
 - Validación local OK: 15/15 assets 200, JS sin errores de sintaxis, headless Chrome renderiza
   10 cards + 3 filtros + 7 FAQs + 19 enlaces wa.me.
 
-## Validaciones pendientes (Fase 4/5)
+## Revisión técnica (Fase 4 — 2026-08-19) ✅
 
-- [ ] Revisión visual del cliente en navegador (mobile + desktop).
+Ejecutada con headless Chrome en viewports 320/375/768/1440 + harness de interacción:
+
+- Sin overflow horizontal en ningún breakpoint.
+- Catálogo dinámico funcional (filtro "De temporada" → 1 card; restaurar → 10).
+- FAQ accordion abre/cierra correctamente.
+- Fuentes Montserrat + Pacifico aplicadas; todas las imágenes cargadas (14/14).
+- 19 enlaces WhatsApp con mensaje prellenado; dominio `wa.me/525532400172`.
+- Sin errores de consola JS.
+
+### Correcciones aplicadas en revisión (commit `5d013b0`)
+
+- **Contraste WCAG AA**: botones WhatsApp → verde oscuro `#177E44` (el `#25D366` con texto blanco
+  fallaba: 1.98:1). Textos secundarios ajustados a ≥4.5:1 (subtítulos, descripciones, duración,
+  pasos, FAQ).
+- **Barra flotante móvil**: `padding-bottom` en body para no tapar el footer en el scroll.
+
+## Prototipo servido
+
+- `python3 -m http.server 8000` → http://localhost:8000 (abierto en navegador del cliente para revisión visual).
+
+## Pendientes (Fase 4/5)
+
+- [ ] Feedback visual del cliente sobre el prototipo en navegador.
 - [ ] Sustituir `hero-products.webp` y `food-drink.webp` por fotografía real premium
       (ver `AI_IMAGE_PROMPTS.md`).
 - [ ] Auditoría Lighthouse post-deploy (objetivo P ≥ 90, resto ≥ 95).

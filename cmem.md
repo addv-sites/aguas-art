@@ -64,6 +64,9 @@ Cero preparación · consistencia por botella · sin merma · ticket premium / v
    Montserrat + Pacifico, paleta navy `#062B59`/blue `#4DA9E8`. Build v1 construido (2026-08-19).
 6. Fotos de sabores = recortes reales del PDF oficial (págs. 3–12). Hero/food = dirección Stitch
    (sustituir por foto real; ver `AI_IMAGE_PROMPTS.md`).
+7. **Revisión técnica completada** (headless Chrome, 4 viewports + interacciones): sin overflow,
+   filtros y FAQ funcionales, 19 enlaces wa.me, contraste WCAG AA corregido (botones WhatsApp
+   `#177E44`, textos secundarios ≥4.5:1). Prototipo servido en local para revisión del cliente.
 
 ## PENDIENTES DE CONFIRMAR
 

@@ -77,6 +77,7 @@ taquerías y marisquerías. **Conversión principal: WhatsApp** (número: `55324
 - Verificar imagen de producto del PDF: `python3 -c "import pymupdf; ..."` (pymupdf disponible en el entorno).
 - OCR de páginas del catálogo: script Swift en `/var/folders/.../T/opencode/ocr.swift` (no versionar).
 - Validación rápida: `node --check js/*.js` + servir local y revisar consola (sin errores).
+- Revisión en viewports con headless Chrome: `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --window-size=375,812 --screenshot=shot.png http://localhost:8000/`
 - No hay lint/tests automatizados; QA manual según `QA.md`.
 
 ## Recordatorio

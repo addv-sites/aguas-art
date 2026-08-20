@@ -3,8 +3,8 @@
 One Page B2B de **Agua Artesanal** (CDMX): venta de aguas artesanales a restaurantes,
 taquerías y marisquerías. **La conversión principal del sitio es contactar por WhatsApp.**
 
-> ✅ **Estado actual:** sitio construido (v1) respetando el diseño aprobado (`stitch/draft.png`).
-> Pendiente de revisión visual y deploy. Ver `project_state.md` para el avance.
+> ✅ **Estado actual:** sitio construido (v1) respetando el diseño aprobado (`stitch/draft.png`),
+> **en producción** y con auditorías Lighthouse en objetivo. Ver `project_state.md` para el avance.
 
 ## El producto
 
@@ -81,17 +81,21 @@ Estilos en `css/styles.css` (variables CSS en `:root`) y `css/responsive.css` (b
 
 ## Cómo desplegar en GitHub Pages
 
-1. **Habilitar Pages:** en el repo → *Settings* → *Pages* → *Source: Deploy from a branch* → rama
-   `main`, carpeta `/ (root)`.
-2. **Publicar:** cualquier `push` a `main` dispara la publicación automática.
-3. **URL:** `https://addv-sites.github.io/aguas-art/`.
-4. Tras publicar, verificar `sitemap.xml` y `robots.txt` y registrar el sitio en Google Search Console.
+El deploy es **automático**: cualquier `push` a `main` dispara el workflow
+`.github/workflows/pages.yml` (`actions/deploy-pages@v4`, sin build previo).
+
+1. **URL pública:** `https://addv-sites.github.io/aguas-art/`.
+2. Para verificar un deploy: *Actions* → workflow *Deploy to GitHub Pages* → *completed*.
+3. **Regla de rutas:** las rutas de imágenes en `data/products.json` deben ser **relativas**
+   (`assets/...`, sin `/` inicial) por la subruta `/aguas-art/` (las rutas absolutas dan 404).
+4. Pendiente: registrar el sitio en Google Search Console y enviar `sitemap.xml`.
 
 ## Pautas de calidad
 
 - Mobile-first; breakpoints 320 / 375 / 390 / 414 / 768 / 1024 / 1440 / 1920 px.
 - Accesibilidad WCAG AA (contraste, focus visible, teclado, aria, `prefers-reduced-motion`).
-- Lighthouse objetivo: Performance ≥ 90, resto ≥ 95.
+- Lighthouse **medido post-deploy (2026-08-19):** Performance 93 · Accessibility 100 ·
+  Best Practices 100 · SEO 100 (objetivo: P ≥ 90, resto ≥ 95). CLS 0, TBT 0 ms.
 - Animaciones solo con `transform`/`opacity` (bajo costo, sin layout/paint).
 - No se inventan datos: sabores, precios, certificaciones, cobertura o testimonios inexistentes
   quedan como `PENDIENTE DE CONFIRMAR`.

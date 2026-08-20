@@ -41,10 +41,12 @@ confirmados), Review/AggregateRating (sin testimonios verificados).
 
 ## Oportunidades futuras
 
-- Enviar el sitio a **Google Search Console** una vez publicado.
-- Registrar el sitemap en GSC.
-- Solicitar indexación de `https://addv-sites.github.io/aguas-art/`.
-- Analizar el perfil de Facebook para decidir si añadir Product schema con imágenes reales.
+- **Sitio publicado:** https://addv-sites.github.io/aguas-art/ (deploy automático vía workflow).
+- [ ] Enviar el sitio a **Google Search Console** (verificación vía meta tag o DNS).
+- [ ] Registrar `sitemap.xml` en GSC.
+- [ ] Solicitar indexación de `https://addv-sites.github.io/aguas-art/`.
+- [ ] Analizar el perfil de Facebook para decidir si añadir Product schema con imágenes reales.
+- **Lighthouse SEO post-deploy: 100** (title, meta, canonical, alt, robots, sitemap, JSON-LD OK).
 
 ## Analytics (preparado, sin librería)
 

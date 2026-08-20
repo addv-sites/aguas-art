@@ -1,6 +1,7 @@
 # QA.md — Agua Artesanal
 
-> Checklist de control de calidad. Fecha: 2026-08-19 (primera validación del build v1).
+> Checklist de control de calidad. Fecha: 2026-08-19 (build v1) · 2026-08-19 (revisión técnica +
+> auditorías post-deploy). Sitio en producción: https://addv-sites.github.io/aguas-art/
 
 ## Contenido / datos
 
@@ -20,35 +21,46 @@
 - [x] CTA WhatsApp aparece inmediatamente (header + hero).
 - [x] Los enlaces WhatsApp abren con mensaje prellenado contextual.
 - [x] Catálogo dinámico con filtros y CTA por producto.
-- [x] WhatsApp flotante en móvil.
+- [x] WhatsApp flotante en móvil (con `padding-bottom` en body para no tapar el footer).
 - [x] Reducción de fricción: cada sección conduce a una acción clara.
 
 ## Responsive
 
-- [ ] 320px · [ ] 375px · [ ] 390px · [ ] 414px · [ ] 768px · [ ] 1024px · [ ] 1440px · [ ] 1920px
-  (CSS definido para todos; falta prueba visual en navegador real).
+- [x] 375px · [x] 768px · [x] 1440px — probados con headless Chrome (sin overflow, layout correcto).
+- [ ] 320px · [ ] 390px · [ ] 414px · [ ] 1024px · [ ] 1920px — CSS definido; falta prueba
+      visual en navegador real (headless no baja de ~484 px).
 
 ## SEO
 
 - [x] Title · description · canonical · OG · Twitter · favicon · sitemap · robots · H1 · alt · JSON-LD.
+- [x] Lighthouse SEO: **100** (post-deploy).
 - [ ] Verificación en Google Search Console (después de publicar).
 
-## Performance (objetivos Lighthouse)
+## Performance (Lighthouse post-deploy — 2026-08-19)
 
+- [x] **Performance: 93** (objetivo ≥ 90) · CLS 0 · TBT 0 ms · LCP 3.0 s (4G throttled).
 - [x] Imágenes en WebP con dimensiones explícitas.
 - [x] Lazy loading en imágenes secundarias.
 - [x] Fuentes con display=swap y preconnect.
 - [x] JS mínimo (3 archivos, sin librerías).
-- [ ] Ejecutar Lighthouse real tras deploy y ajustar si P < 90 / resto < 95.
+- [x] Hero con `fetchpriority="high"` (LCP).
 
 ## Accesibilidad (WCAG AA)
 
-- [x] Contraste suficiente (navy/blanco, azul/ice).
+- [x] Contraste suficiente (navy/blanco, azul/ice). Corregidos en revisión: botones WhatsApp
+      `#177E44`, `section-eyebrow` `#2878AE`, textos secundarios ≥4.5:1.
 - [x] Focus visible en botones (`:focus-visible`).
 - [x] Alt text descriptivo.
 - [x] aria-labels en menú móvil, filtros y CTAs.
 - [x] `prefers-reduced-motion` (desactiva animaciones y scroll suave).
-- [ ] Auditoría axe/pa11y tras deploy.
+- [x] **Auditoría axe/Lighthouse: 100, sin violaciones** (post-deploy).
+
+## Despliegue (GitHub Pages)
+
+- [x] Sitio publicado: https://addv-sites.github.io/aguas-art/
+- [x] Deploy automático en cada push a `main` (workflow `.github/workflows/pages.yml`).
+- [x] Recursos verificados: HTML, CSS, JS, `products.json`, imágenes y favicon → 200.
+- [x] Bug corregido: rutas de imágenes de `products.json` son relativas (`assets/...`).
 
 ## Cómo validar
 
@@ -57,4 +69,7 @@
 python3 -m http.server 8000
 # Abrir http://localhost:8000 y revisar consola (sin errores), catálogo cargado,
 # enlaces WhatsApp con mensajes prellenados, filtros, FAQ, menú móvil.
+
+# Auditoría Lighthouse completa
+npx lighthouse https://addv-sites.github.io/aguas-art/ --only-categories=performance,accessibility,best-practices,seo
 ```

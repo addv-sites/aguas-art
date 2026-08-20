@@ -47,7 +47,7 @@ producto terminado. Eje de copy, hero y sección de beneficios.
 
 ## Próximos pasos (secuencia propuesta)
 
-1. Fase 1 — `MARKET_RESEARCH.md` + `BRAND_STRATEGY.md` (cristaliza diferenciador y posicionamiento).
+1. Fase 1 — `MARKET_RESEARCH.md` + `BRAND_STRATEGY.md` (cristaliza diferenciador y posicionamiento). ✅ **ENTREGADO (2026-08-19)**.
 2. Fase 2 — Extraer/seleccionar imágenes del PDF y generar `AI_IMAGE_PROMPTS.md` + `IMAGE_MANIFEST.md`.
 3. Fase 3 — Construcción del sitio (HTML/CSS/JS estáticos) + SEO + analítica de eventos.
 4. Fase 4 — QA en breakpoints (320–1920) + checklist del brief + `QA.md` + `SEO.md` + `SITE_ARCHITECTURE.md`.

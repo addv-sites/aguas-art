@@ -1,6 +1,6 @@
 # Project State — Agua Artesanal
 
-> Estado actualizado: 2026-08-19 · Sitio construido v1 (build respetando `stitch/draft.png`).
+> Estado actualizado: 2026-08-21 · Sitio en producción + optimización de imágenes.
 
 ## Resumen del proyecto
 
@@ -93,6 +93,19 @@ Ejecutada con headless Chrome en viewports 320/375/768/1440 + harness de interac
   `.github/workflows/pages.yml` (deploy automático con `actions/deploy-pages@v4`).
 - Corregido además: contraste de `.section-eyebrow` (`#4DA9E8`→`#2878AE`, 2.57→4.79:1)
   y aspect ratio del logo del footer (`height:auto`).
+
+### Optimización de imágenes (2026-08-21)
+
+- **AVIF con fallback WebP** para las dos imágenes grandes (hero y food-drink) vía `<picture>`
+  (`<source type="image/avif">`). PNG duplicados eliminados.
+- **Re-crop de los 10 sabores**: recortes ajustados al contorno real de cada botella
+  (antes uniformes 700×1622; ahora alturas variables, p. ej. piña colada 700×1109).
+- **Fix asociado**: `.product-media` pasó de `object-fit:cover` a `contain` +
+  `object-position:center bottom` — con recortes ajustados, `cover` cortaba la base de las
+  botellas más altas (mazapán, piña colada). Con `contain` la botella se muestra completa,
+  alineada a la base de la tarjeta.
+- Verificado en local: AVIF servidos 200 y solicitados por Chrome; catálogo dinámico renderiza
+  10 tarjetas + 3 filtros; sin referencias rotas tras borrar los PNG; JS sin errores de sintaxis.
 
 ## Reglas críticas del proyecto
 

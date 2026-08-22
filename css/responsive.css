@@ -77,8 +77,8 @@
   .why-card{border-right:0;border-bottom:1px solid rgba(255,255,255,.14);padding:16px 4px}
   .steps{grid-template-columns:1fr 1fr;gap:12px}
   .step{padding:22px 18px}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:22px}
-  .footer-bottom{display:block;line-height:1.9}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:26px}
+  .footer-bottom{line-height:1.9}
   .cta{border-radius:22px}
   .faq-q{font-size:13px;padding:18px}
 }
@@ -88,7 +88,11 @@
   .hero-visual img{height:280px}
   .product-media{aspect-ratio:0.66}
   .steps{grid-template-columns:1fr}
-  .footer-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr;gap:28px;text-align:center}
+  .footer-brand{margin:0 auto}
+  .footer-logo{width:100px;margin:0 auto}
+  .footer-contact{align-items:center;width:100%}
+  .footer-wa{width:100%;max-width:320px}
   .why-grid{grid-template-columns:1fr 1fr}
   .trust{grid-template-columns:1fr 1fr}
 }

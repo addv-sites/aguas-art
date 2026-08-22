@@ -107,6 +107,16 @@ Ejecutada con headless Chrome en viewports 320/375/768/1440 + harness de interac
 - Verificado en local: AVIF servidos 200 y solicitados por Chrome; catálogo dinámico renderiza
   10 tarjetas + 3 filtros; sin referencias rotas tras borrar los PNG; JS sin errores de sintaxis.
 
+### Rediseño de footer + re-compresión (2026-08-21)
+
+- **Footer rediseñado**: de 4 columnas planas a 2 columnas — marca (logo + tagline) y bloque
+  "Contacto" con CTA WhatsApp destacado, email y Facebook con iconos Lucide (`i-mail`,
+  `i-facebook` añadidos al sprite). En móvil se centra todo a 1 columna; `.footer-bottom`
+  simplificado a una sola línea.
+- **Re-compresión de los 10 sabores WebP** (~50% más livianos, p. ej. horchata 124→59 KB).
+- Verificado: clases CSS del footer completas, iconos presentes en el sprite, `node --check`
+  OK en los 3 JS.
+
 ## Reglas críticas del proyecto
 
 - **NO inventar** sabores, precios, certificaciones, cobertura, testimonios, características.

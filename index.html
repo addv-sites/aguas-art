@@ -82,6 +82,8 @@
   <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></symbol>
   <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+  <symbol id="i-facebook" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
 </svg>
 
 <header class="header">
@@ -350,23 +352,29 @@
 <footer>
   <div class="container">
     <div class="footer-grid">
-      <img class="footer-logo" src="assets/images/logo.webp" alt="Agua Artesanal" loading="lazy" width="730" height="600">
-      <div>
-        <div class="footer-label">WhatsApp</div>
-        <div class="footer-value"><a href="#" data-wa="general" target="_blank" rel="noopener">55 3240 0172</a></div>
+      <div class="footer-brand">
+        <img class="footer-logo" src="assets/images/logo.webp" alt="Agua Artesanal" loading="lazy" width="730" height="600">
+        <p class="footer-tag">Aguas artesanales 100% naturales para restaurantes, taquerías y marisquerías en CDMX.</p>
       </div>
-      <div>
-        <div class="footer-label">Correo</div>
-        <div class="footer-value"><a href="mailto:Javieresp403@gmail.com">Javieresp403@gmail.com</a></div>
-      </div>
-      <div>
-        <div class="footer-label">Facebook</div>
-        <div class="footer-value"><a href="https://www.facebook.com/profile.php?id=100071090715762" target="_blank" rel="noopener">Agua Artesanal</a></div>
-      </div>
+      <nav class="footer-contact" aria-label="Contacto">
+        <div class="footer-label">Contacto</div>
+        <a class="btn btn-wa footer-wa" href="#" data-wa="general" target="_blank" rel="noopener">
+          <svg aria-hidden="true"><use href="#i-message"/></svg>55 3240 0172
+        </a>
+        <ul class="footer-list">
+          <li>
+            <svg class="f-ico" aria-hidden="true"><use href="#i-mail"/></svg>
+            <a href="mailto:Javieresp403@gmail.com">Javieresp403@gmail.com</a>
+          </li>
+          <li>
+            <svg class="f-ico" aria-hidden="true"><use href="#i-facebook"/></svg>
+            <a href="https://www.facebook.com/profile.php?id=100071090715762" target="_blank" rel="noopener" aria-label="Facebook de Agua Artesanal">Agua Artesanal</a>
+          </li>
+        </ul>
+      </nav>
     </div>
     <div class="footer-bottom">
-      <span>© <span id="year">2026</span> Agua Artesanal. Todos los derechos reservados.</span>
-      <span>Venta en línea · Atención por WhatsApp</span>
+      <span>© <span id="year">2026</span> Agua Artesanal · Todos los derechos reservados</span>
     </div>
   </div>
 </footer>

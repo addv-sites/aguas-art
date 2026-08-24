@@ -1,6 +1,6 @@
 # Project State — Agua Artesanal
 
-> Estado actualizado: 2026-08-21 · Sitio en producción + optimización de imágenes.
+> Estado actualizado: 2026-08-24 · Sitio en producción + re-export post-crasheo.
 
 ## Resumen del proyecto
 
@@ -116,6 +116,20 @@ Ejecutada con headless Chrome en viewports 320/375/768/1440 + harness de interac
 - **Re-compresión de los 10 sabores WebP** (~50% más livianos, p. ej. horchata 124→59 KB).
 - Verificado: clases CSS del footer completas, iconos presentes en el sprite, `node --check`
   OK en los 3 JS.
+
+### Re-export post-crasheo (2026-08-24)
+
+- **Contexto**: sesión interrumpida dejó 12 PNGs huérfanos sin trackear (`assets/images/flavors/*.png`
+  + `hero-products.png` + `food-drink.png`, 1.6–2.3 MB c/u, generados 2026-08-24 14:39–16:23).
+  Los WebP existentes habían quedado en 1080×1500 uniformes (estirados) tras la última recompresión,
+  contradiciendo el re-crop variable de 2026-08-21.
+- **Acción**: reconversión con Pillow (LANCZOS) a WebP q75/method 4 y AVIF q50:
+  sabores a 700 px ancho con alturas variables reales (970–1621 px), hero 1220×686, food 1240×743.
+  Pesos: sabores 50–97 KB, hero 109 KB WebP / 68 KB AVIF, food 82 KB WebP / 50 KB AVIF.
+- **Limpieza**: PNGs huérfanos eliminados (estado previo “PNG duplicados eliminados” restaurado).
+- **Docs**: `IMAGE_MANIFEST.md` actualizado con dimensiones reales; `QA.md` marcado como re-export.
+- **Verificación**: `python3 -m http.server` → 10 sabores 200, hero/food AVIF+WebP 200,
+  `node --check` OK en 3 JS, headless Chrome renderiza sin errores.
 
 ## Reglas críticas del proyecto
 

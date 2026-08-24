@@ -1,7 +1,7 @@
 # QA.md — Agua Artesanal
 
 > Checklist de control de calidad. Fecha: 2026-08-19 (build v1) · 2026-08-19 (revisión técnica +
-> auditorías post-deploy). Sitio en producción: https://addv-sites.github.io/aguas-art/
+> auditorías post-deploy) · 2026-08-24 (re-export de imágenes). Sitio en producción: https://addv-sites.github.io/aguas-art/
 
 ## Contenido / datos
 
@@ -12,8 +12,8 @@
 - [x] Las imágenes de sabores provienen del catálogo real (recortes).
 - [x] WhatsApp correcto: `5532400172` (enlaces `wa.me/525532400172`).
 - [x] Correo correcto: `Javieresp403@gmail.com`.
-- [ ] Pendiente de revisión visual: recortes de botellas (recorte automático).
-- [ ] Pendiente de sustitución: hero y food-drink (imágenes de dirección Stitch).
+- [x] Recortes de botellas regenerados 2026-08-24 (700 px ancho, alturas variables 970–1621 px, object-fit contain) — pendiente validación visual final del cliente.
+- [ ] Pendiente de sustitución: hero y food-drink (imágenes de dirección Stitch) — re-export 2026-08-24 corrigió dimensiones a 1220×686 / 1240×743 y AVIF optimizado, pero siguen siendo dirección Stitch.
 
 ## UX / Conversión
 
@@ -36,10 +36,10 @@
 - [x] Lighthouse SEO: **100** (post-deploy).
 - [ ] Verificación en Google Search Console (después de publicar).
 
-## Performance (Lighthouse post-deploy — 2026-08-19)
+## Performance (Lighthouse post-deploy — 2026-08-19; re-export 2026-08-24)
 
 - [x] **Performance: 93** (objetivo ≥ 90) · CLS 0 · TBT 0 ms · LCP 3.0 s (4G throttled).
-- [x] Imágenes en WebP con dimensiones explícitas.
+- [x] Imágenes en WebP/AVIF con dimensiones explícitas (re-export 2026-08-24: sabores 700 px ancho, hero 1220×686, food 1240×743).
 - [x] Lazy loading en imágenes secundarias.
 - [x] Fuentes con display=swap y preconnect.
 - [x] JS mínimo (3 archivos, sin librerías).

@@ -1,7 +1,7 @@
 # QA.md — Agua Artesanal
 
 > Checklist de control de calidad. Fecha: 2026-08-19 (build v1) · 2026-08-19 (revisión técnica +
-> auditorías post-deploy) · 2026-08-24 (re-export de imágenes). Sitio en producción: https://addv-sites.github.io/aguas-art/
+> auditorías post-deploy) · 2026-08-24 (re-export) · 2026-08-25 (perf 98). Sitio en producción: https://addv-sites.github.io/aguas-art/
 
 ## Contenido / datos
 
@@ -36,14 +36,14 @@
 - [x] Lighthouse SEO: **100** (post-deploy).
 - [ ] Verificación en Google Search Console (después de publicar).
 
-## Performance (Lighthouse post-deploy — 2026-08-19; re-export 2026-08-24)
+## Performance (Lighthouse — 2026-08-25: 98/100/100/100)
 
-- [x] **Performance: 93** (objetivo ≥ 90) · CLS 0 · TBT 0 ms · LCP 3.0 s (4G throttled).
-- [x] Imágenes en WebP/AVIF con dimensiones explícitas (re-export 2026-08-24: sabores 700 px ancho, hero 1220×686, food 1240×743).
-- [x] Lazy loading en imágenes secundarias.
-- [x] Fuentes con display=swap y preconnect.
-- [x] JS mínimo (3 archivos, sin librerías).
-- [x] Hero con `fetchpriority="high"` (LCP).
+- [x] **Performance: 98 · CLS 0.013 · TBT 0ms · LCP 2.4s · SI 1.5s** (local, Pages 98). Histórico: 93 (2026-08-19) → 90 (post-srcset sin CLS fix) → 98 (critical+fonts+880).
+- [x] Imágenes responsive: sabores `320/560/700w` (srcset + sizes), hero `640/880/1220` AVIF+WebP (880 exact 38KB vs 1220 69KB), logo `240/480 1x/2x`, food `640/1240`; `src` fallback `320w`.
+- [x] Critical CSS 6KB inline (header+hero+trust) + `preload onload` para `styles/responsive/order-modal` + `content-visibility:auto` en grid + `requestIdleCallback` en catalog.
+- [x] Fonts self-host `montserrat 35KB + pacifico 22KB` woff2 preload + `fonts.css` 1.3KB swap (elimina Google Fonts chain 760→150ms); FCP 2.7→1.2s.
+- [x] Hero `fetchpriority=high` + preload `imagesrcset`; lazy en sabores/food.
+- [x] JS mínimo 4 archivos defer (whatsapp/catalog/order/main) + `cache:default`.
 
 ## Accesibilidad (WCAG AA)
 

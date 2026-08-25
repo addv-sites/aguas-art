@@ -1,7 +1,7 @@
 # CMEM — Memoria compacta de Agua Artesanal
 
 > Memoria compacta para inyectar en sesiones futuras. Datos extraídos del catálogo PDF (OCR) y brief.
-> Actualizado: 2026-08-19.
+> Actualizado: 2026-08-25 · Lighthouse 98/100/100/100.
 
 ## Contacto / canales (oficiales)
 
@@ -49,9 +49,9 @@ Cero preparación · consistencia por botella · sin merma · ticket premium / v
 
 ## Identidad visual
 
-- Paleta: Navy `#082B49` · Water `#20B8D6` · Light Aqua `#8DE5F2` · White `#FFFFFF` · Ice `#F4F9FB` ·
-  Text `#102A3A` · WhatsApp `#25D366` (solo WhatsApp) · Accent `#F47C48` (solo badges/promos).
-- Tipografía: Plus Jakarta Sans (H, 700/800) + Inter (body 400–600).
+- Paleta: Navy `#082B59` · Water `#4DA9E8` · Ice `#F2FAFD` · White `#FFFFFF` · Text `#102A43` ·
+  WhatsApp `#177E44` · Accent `#E9A9A2` (coral badge) — ver `css/styles.css:7`.
+- Tipografía: **Montserrat (400/500/600/700/800) + Pacifico** self-hosted en `assets/fonts/` (woff2 35+22KB, swap).
 - Dirección: Premium Fresh Mexican, sin clichés mexicanos turísticos.
 
 ## Decisiones tomadas
@@ -61,17 +61,18 @@ Cero preparación · consistencia por botella · sin merma · ticket premium / v
 3. Sin precios visibles (no confirmados). Sin testimonios inventados.
 4. Catálogo analizado vía OCR (pymupdf + Vision framework de macOS).
 5. **Diseño base = `stitch/draft.png` + `stitch/DESIGN.md`** (aprobado): logo original del cliente,
-   Montserrat + Pacifico, paleta navy `#062B59`/blue `#4DA9E8`. Build v1 construido (2026-08-19).
+    Montserrat + Pacifico, paleta navy `#062B59`/blue `#4DA9E8`. Build v1 construido (2026-08-19).
 6. Fotos de sabores = recortes reales del PDF oficial (págs. 3–12). Hero/food = dirección Stitch
-   (sustituir por foto real; ver `AI_IMAGE_PROMPTS.md`).
+    (sustituir por foto real; ver `AI_IMAGE_PROMPTS.md`).
 7. **Revisión técnica completada** (headless Chrome, 4 viewports + interacciones): sin overflow,
-   filtros y FAQ funcionales, 19 enlaces wa.me, contraste WCAG AA corregido (botones WhatsApp
-   `#177E44`, textos secundarios ≥4.5:1). Prototipo servido en local para revisión del cliente.
+    filtros y FAQ funcionales, 19 enlaces wa.me, contraste WCAG AA corregido (botones WhatsApp
+    `#177E44`, textos secundarios ≥4.5:1). Prototipo servido en local para revisión del cliente.
 8. **En producción**: GitHub Pages habilitado → https://addv-sites.github.io/aguas-art/.
-   Deploy automático vía `.github/workflows/pages.yml` (deploy-pages@v4) en cada push a `main`.
-   Lighthouse post-deploy: P 93 / A11y 100 / BP 100 / SEO 100. Bug crítico resuelto: rutas de
-   imágenes de `products.json` ahora son relativas (el modo absoluto fallaba bajo la subruta
-   `/aguas-art/`).
+    Deploy automático vía `.github/workflows/pages.yml` (deploy-pages@v4) en cada push a `main`.
+    Lighthouse post-deploy: P 93 / A11y 100 / BP 100 / SEO 100. Bug crítico resuelto: rutas de
+    imágenes de `products.json` ahora son relativas (el modo absoluto fallaba bajo la subruta
+    `/aguas-art/`).
+9. **Ciclo perf 90→98 (2026-08-25)**: critical CSS inline 6KB + preload LCP, self-host fonts (Montserrat 35KB + Pacifico 22KB), srcset responsive 320/560/700 + hero 640/880/1220 + logo 240/480, catalog `requestIdleCallback` + `content-visibility:auto`. Resultado **98/100/100/100 · CLS 0.013 · LCP 2.4s · SI 1.5s local** (Pages 98). Commits `57d06a9→2e325ae`.
 
 ## PENDIENTES DE CONFIRMAR
 

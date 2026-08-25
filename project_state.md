@@ -1,6 +1,6 @@
 # Project State — Agua Artesanal
 
-> Estado actualizado: 2026-08-24 · Sitio en producción + re-export post-crasheo.
+> Estado actualizado: 2026-08-25 · Sitio en producción · Lighthouse 98/100/100/100 · Ciclo 90→98 completado.
 
 ## Resumen del proyecto
 
@@ -76,9 +76,9 @@ Ejecutada con headless Chrome en viewports 320/375/768/1440 + harness de interac
 ## Pendientes (Fase 4/5)
 
 - [x] Habilitar GitHub Pages → **https://addv-sites.github.io/aguas-art/** (deploy automático vía workflow).
-- [x] Auditoría Lighthouse post-deploy: **Performance 93 · Accessibility 100 · Best Practices 100 · SEO 100**
-      (objetivo P ≥ 90, resto ≥ 95 — CUMPLIDO). TBT 0 ms, CLS 0.
+- [x] Auditoría Lighthouse post-deploy inicial: **93/100/100/100** (2026-08-19, objetivo CUMPLIDO).
 - [x] Auditoría accesibilidad (axe/Lighthouse): **100, sin violaciones**.
+- [x] Ciclo perf 90→98 (2026-08-24/25): **98/100/100/100 · CLS 0.013 · TBT 0ms · LCP 2.4s · SI 1.5s local** (ver detalle abajo).
 - [ ] Feedback visual del cliente sobre el prototipo en navegador (http://localhost:8000).
 - [ ] Sustituir `hero-products.webp` y `food-drink.webp` por fotografía real premium
       (ver `AI_IMAGE_PROMPTS.md`).
@@ -130,6 +130,17 @@ Ejecutada con headless Chrome en viewports 320/375/768/1440 + harness de interac
 - **Docs**: `IMAGE_MANIFEST.md` actualizado con dimensiones reales; `QA.md` marcado como re-export.
 - **Verificación**: `python3 -m http.server` → 10 sabores 200, hero/food AVIF+WebP 200,
   `node --check` OK en 3 JS, headless Chrome renderiza sin errores.
+
+### Ciclo perf 90→98 (2026-08-24/25) — 5 commits
+
+- **Contexto**: tras `dc699b6` (fix order), Lighthouse en Pages bajó a P 90 y reportó CLS 1.28 + LCP 3.4s + bloqueo 1740ms.
+- **57d06a9** `perf(images): srcset responsive` — sabores `320/560/700w` + `sizes 50vw/25vw/18vw`, hero `640/1220` AVIF+WebP, food `640/1240`, logo `240/480 1x/2x`; recompresión sabores q75 (55KB avg), logo 114→35KB, preload LCP + `cache:default`. Sin commit quedó con `preload/media=print` que disparó CLS 1.74.
+- **5f4062a** `fix(perf): revierte CSS async` — revert `fonts` y `css` a `rel=stylesheet` bloqueante; CLS 1.28→0, TBT 0, perf 55→90 (local 87). Ajuste `src` fallback de `700w`→`320w`.
+- **e58121a** `perf(critical): inline above-fold` (A+B) — critical CSS 6KB inline (header+hero+trust + `@media 760` hero móvil) en `index.html:34`; `styles/responsive/order-modal` a `preload onload`, preload LCP `hero 640/1220 avif` con `imagesrcset`. `render-blocking 1740→868ms` (solo fonts), `renderDelay 2780→800ms`, `loadDelay 160→34ms`. Local 85→87, Pages 90→92.
+- **efc2739** `perf(fonts): self-host` — descarga `montserrat-latin 35KB` + `pacifico 22KB` a `assets/fonts/`, `fonts.css` local con `swap`; `preload woff2` + `fonts.css 1.3KB`. Elimina cadena `fonts.googleapis 108ms + 2×woff2 188ms` y `preconnect` cross-origin. `wastedMs 868→150ms`, `FCP 2.7→1.2s`, `LCP 3.0s`. Local 87→94, Pages 92→98.
+- **2e325ae** `perf(si): hero 880 + defer catalog` — genera `hero-880 38KB avif /66KB webp` (display 871, antes 951 oversize 23KB) y `srcset 640/880/1220`; `catalog.js` a `requestIdleCallback 2s` + `.product-grid{content-visibility:auto; contain-intrinsic-size:800px}`. Local perf 94→98, SI 1.6→1.5s, LCP 3.0→2.4s, CLS 0.013.
+
+**Resultado**: **98/100/100/100 · CLS 0.013 · TBT 0ms · LCP 2.4s · SI 1.5s local** (Pages 98). Queda `image-delivery 300KB` teórico (audit espera 285 para DPR=1, servimos 560 para retina DPR=2 — correcto) y `fonts.css 150ms` residual (inlineable para 100, no recomendado). Sin sacrificio UX.
 
 ## Reglas críticas del proyecto
 

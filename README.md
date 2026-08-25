@@ -49,9 +49,10 @@ El sitio es 100% estático: no requiere instalación de dependencias, Docker, ba
 ├── cmem.md                 # memoria compacta de datos y decisiones
 ├── project_state.md        # estado del proyecto
 ├── CLAUDE.md               # contexto operativo para sesiones de Claude
-├── assets/images/          # logo, hero, food, sabores (WebP)
-├── css/                    # styles.css, responsive.css
-├── js/                     # main.js, catalog.js, whatsapp.js
+├── assets/images/          # logo, hero, food, sabores (WebP/AVIF responsive)
+├── assets/fonts/           # montserrat/pacifico woff2 self-host
+├── css/                    # styles.css, responsive.css, order-modal.css
+├── js/                     # main.js, catalog.js, whatsapp.js, order.js
 └── data/                   # products.json (catálogo dinámico)
 ```
 
@@ -94,8 +95,8 @@ El deploy es **automático**: cualquier `push` a `main` dispara el workflow
 
 - Mobile-first; breakpoints 320 / 375 / 390 / 414 / 768 / 1024 / 1440 / 1920 px.
 - Accesibilidad WCAG AA (contraste, focus visible, teclado, aria, `prefers-reduced-motion`).
-- Lighthouse **medido post-deploy (2026-08-19):** Performance 93 · Accessibility 100 ·
-  Best Practices 100 · SEO 100 (objetivo: P ≥ 90, resto ≥ 95). CLS 0, TBT 0 ms.
+- Lighthouse **2026-08-25:** Performance **98** · Accessibility 100 · Best Practices 100 · SEO 100 (objetivo: P ≥ 90, resto ≥ 95). CLS 0.013, TBT 0ms, LCP 2.4s, SI 1.5s local (Pages 98). Histórico 93→98.
+- Critical CSS inline + self-host fonts + responsive srcset (320/560/700, hero 640/880/1220) + `requestIdleCallback` catálogo.
 - Animaciones solo con `transform`/`opacity` (bajo costo, sin layout/paint).
 - No se inventan datos: sabores, precios, certificaciones, cobertura o testimonios inexistentes
   quedan como `PENDIENTE DE CONFIRMAR`.

@@ -292,8 +292,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   });
 
-  // intercept all whatsapp triggers to open modal
+  // intercept whatsapp triggers to open modal, except catalog/footer direct links
   document.querySelectorAll('[data-wa], [data-wa-product]').forEach(el=>{
+    if (el.hasAttribute('data-no-order') || el.getAttribute('data-wa') === 'catalog') return;
     // keep original href for fallback, but override click
     el.addEventListener('click', (e)=>{
       // allow direct if user holds modifier or is auxiliary button

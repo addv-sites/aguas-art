@@ -88,4 +88,15 @@ function trackCatalogFilter(filter) {
   if (typeof dataLayer !== 'undefined') dataLayer.push({ event: 'catalog_filter', filter });
 }
 
-document.addEventListener('DOMContentLoaded', loadProducts);
+function scheduleLoad() {
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(() => loadProducts(), { timeout: 2000 });
+  } else {
+    setTimeout(loadProducts, 300);
+  }
+}
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', scheduleLoad);
+} else {
+  scheduleLoad();
+}

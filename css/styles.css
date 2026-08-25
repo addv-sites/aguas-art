@@ -228,7 +228,7 @@ h1{
 }
 .filter-chip:hover{border-color:var(--blue)}
 .filter-chip.active{background:var(--navy);border-color:var(--navy);color:var(--white)}
-.product-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.product-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;content-visibility:auto;contain-intrinsic-size:800px}
 .product{
   position:relative;
   border:1px solid var(--line);

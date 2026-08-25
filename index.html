@@ -29,11 +29,18 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Pacifico&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Pacifico&display=swap"></noscript>
 
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <link rel="stylesheet" href="css/order-modal.css">
+  <!-- Preload LCP image -->
+  <link rel="preload" as="image" href="assets/images/hero-products-640.webp" imagesrcset="assets/images/hero-products-640.webp 640w, assets/images/hero-products-1220.webp 1220w" imagesizes="(max-width:760px) 100vw, 58vw" fetchpriority="high" type="image/webp">
+
+  <link rel="preload" href="css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
+  <link rel="stylesheet" href="css/responsive.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="css/responsive.css"></noscript>
+  <link rel="stylesheet" href="css/order-modal.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="css/order-modal.css"></noscript>
 
   <!-- Structured data: Organization -->
   <script type="application/ld+json">
@@ -93,7 +100,7 @@
       <svg aria-hidden="true"><use href="#i-menu"/></svg>
     </button>
     <a href="#inicio" class="brand" aria-label="Agua Artesanal — inicio">
-      <img src="assets/images/logo.webp" alt="Agua Artesanal" width="730" height="486" fetchpriority="high">
+      <img src="assets/images/logo-240.webp" srcset="assets/images/logo-240.webp 1x, assets/images/logo-480.webp 2x" alt="Agua Artesanal" width="120" height="80" fetchpriority="high" decoding="async">
     </a>
     <nav class="navlinks" id="navlinks" aria-label="Navegación principal">
       <a href="#inicio">INICIO</a>
@@ -132,8 +139,9 @@
       </div>
       <div class="hero-visual fade">
         <picture>
-          <source type="image/avif" srcset="assets/images/hero-products.avif">
-          <img src="assets/images/hero-products.webp" alt="Aguas artesanales de Agua Artesanal para tu negocio" fetchpriority="high" width="610" height="345">
+          <source type="image/avif" srcset="assets/images/hero-products-640.avif 640w, assets/images/hero-products-1220.avif 1220w" sizes="(max-width:760px) 100vw, 58vw">
+          <source type="image/webp" srcset="assets/images/hero-products-640.webp 640w, assets/images/hero-products-1220.webp 1220w" sizes="(max-width:760px) 100vw, 58vw">
+          <img src="assets/images/hero-products-640.webp" alt="Aguas artesanales de Agua Artesanal para tu negocio" fetchpriority="high" decoding="async" width="1220" height="686">
         </picture>
       </div>
     </div>
@@ -188,8 +196,9 @@
       </div>
       <div class="food fade">
         <picture>
-          <source type="image/avif" srcset="assets/images/food-drink.avif">
-          <img src="assets/images/food-drink.webp" alt="Bebida artesanal acompañando comida mexicana" loading="lazy" width="490" height="235">
+          <source type="image/avif" srcset="assets/images/food-drink-640.avif 640w, assets/images/food-drink.avif 1240w" sizes="(max-width:760px) 100vw, 50vw">
+          <source type="image/webp" srcset="assets/images/food-drink-640.webp 640w, assets/images/food-drink-1240.webp 1240w" sizes="(max-width:760px) 100vw, 50vw">
+          <img src="assets/images/food-drink-640.webp" alt="Bebida artesanal acompañando comida mexicana" loading="lazy" decoding="async" width="640" height="383">
         </picture>
       </div>
     </div>
@@ -356,7 +365,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img class="footer-logo" src="assets/images/logo.webp" alt="Agua Artesanal" loading="lazy" width="730" height="486">
+        <img class="footer-logo" src="assets/images/logo-240.webp" srcset="assets/images/logo-240.webp 1x, assets/images/logo-480.webp 2x" alt="Agua Artesanal" loading="lazy" decoding="async" width="120" height="80">
         <p class="footer-tag">Aguas artesanales 100% naturales para restaurantes, taquerías y marisquerías en CDMX.</p>
       </div>
       <nav class="footer-contact" aria-label="Contacto">
@@ -445,9 +454,9 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
-<script src="js/whatsapp.js"></script>
-<script src="js/catalog.js"></script>
-<script src="js/order.js"></script>
-<script src="js/main.js"></script>
+<script src="js/whatsapp.js" defer></script>
+<script src="js/catalog.js" defer></script>
+<script src="js/order.js" defer></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>

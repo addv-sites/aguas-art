@@ -14,6 +14,11 @@ function escapeHtml(str) {
     .replace(/"/g, '&quot;');
 }
 
+function srcSetFor(p) {
+  const base = p.image.replace(/\.webp$/, '');
+  return `${escapeHtml(base)}-320.webp 320w, ${escapeHtml(base)}-560.webp 560w, ${escapeHtml(p.image)} 700w`;
+}
+
 function productCard(p) {
   const badge = p.badge ? `<span class="product-badge">${escapeHtml(p.badge)}</span>` : '';
   const link = window.createWhatsAppLink(window.productMessage(p.name));
@@ -21,7 +26,7 @@ function productCard(p) {
     <article class="product fade" data-category="${escapeHtml(p.category)}">
       <div class="product-media">
         ${badge}
-        <img src="${escapeHtml(p.image)}" alt="Agua artesanal ${escapeHtml(p.name)}" loading="lazy" width="560" height="1300">
+        <img src="${escapeHtml(p.image)}" srcset="${srcSetFor(p)}" sizes="(max-width:760px) 50vw, (max-width:1180px) 25vw, 18vw" alt="Agua artesanal ${escapeHtml(p.name)}" loading="lazy" decoding="async" width="320" height="443">
       </div>
       <h3>${escapeHtml(p.name)}</h3>
       <p class="product-size">${escapeHtml(p.size)}</p>
@@ -39,7 +44,7 @@ async function loadProducts() {
 
   let products = [];
   try {
-    const res = await fetch(PRODUCTS_URL, { cache: 'no-cache' });
+    const res = await fetch(PRODUCTS_URL, { cache: 'default' });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     products = await res.json();
   } catch (err) {

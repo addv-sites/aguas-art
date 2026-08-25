@@ -38,7 +38,7 @@ function totalFlavors() {
 async function ensureProducts() {
   if (productsCache.length) return productsCache;
   try {
-    const res = await fetch('data/products.json', { cache: 'no-cache' });
+    const res = await fetch('data/products.json', { cache: 'default' });
     productsCache = await res.json();
   } catch (_) { productsCache = []; }
   return productsCache;

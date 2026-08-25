@@ -13,7 +13,7 @@ function createWhatsAppLink(message) {
 
 const WA_MESSAGES = {
   general: 'Hola, vi el sitio de Agua Artesanal y quiero conocer sus sabores y opciones para mi negocio.',
-  catalog: 'Hola, quiero conocer el catálogo de aguas artesanales para mi negocio.',
+  catalog: 'Hola, buen día. Quisiera que me envíen el catálogo de Agua Artesanal en PDF por favor, con sabores y presentaciones disponibles para mi negocio. ¡Gracias!',
   quote: 'Hola, quiero cotizar aguas artesanales para mi negocio.',
   business: 'Hola, soy dueño de un restaurante/negocio gastronómico y quiero información de Agua Artesanal.',
   final: 'Hola, estoy listo para hacer mi pedido de Agua Artesanal.',

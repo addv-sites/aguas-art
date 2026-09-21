@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://addv-sites.github.io/aguas-art/sitemap.xml
+Sitemap: https://aguaartesanal.mx/sitemap.xml

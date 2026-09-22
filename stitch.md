@@ -112,7 +112,7 @@ mucha área negativa, jerarquía clara, grandes titulares.
 
 ### 13 CTA final + Footer
 - Headline: **"Haz tu próximo pedido por WhatsApp."** · Botón **"Hablar por WhatsApp"**.
-- Footer: Agua Artesanal · Venta en línea · WhatsApp 5532400172 · correo Javieresp403@gmail.com · Facebook.
+- Footer: Agua Artesanal · Venta en línea · WhatsApp 5532400172 · correo aguaartesanal2020@gmail.com · Facebook.
 - WhatsApp flotante en móvil (safe-area, contraste, thumb-friendly).
 
 ## REQUISITOS DE DISEÑO / EXPERIENCIA
@@ -143,6 +143,6 @@ One Page desktop + mobile (hero 60/40 producto/mensaje, catálogo con grandes fo
 ## DATOS DE CONTACTO (oficiales, para el diseño)
 
 - WhatsApp: **5532400172** (enlaces `https://wa.me/5215532400172`)
-- Correo: Javieresp403@gmail.com
+- Correo: aguaartesanal2020@gmail.com
 - Facebook: https://www.facebook.com/profile.php?id=100071090715762
 - Redes: @aguaartesanal

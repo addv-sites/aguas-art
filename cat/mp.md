@@ -98,7 +98,7 @@ El enlace debe abrir WhatsApp directamente.
 
 ## Correo
 
-[Javieresp403@gmail.com](mailto:Javieresp403@gmail.com)
+[aguaartesanal2020@gmail.com](mailto:aguaartesanal2020@gmail.com)
 
 ---
 
@@ -1127,7 +1127,7 @@ WhatsApp:
 
 Correo:
 
-[Javieresp403@gmail.com](mailto:Javieresp403@gmail.com)
+[aguaartesanal2020@gmail.com](mailto:aguaartesanal2020@gmail.com)
 
 Facebook.
 

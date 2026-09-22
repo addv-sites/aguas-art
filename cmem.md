@@ -6,7 +6,7 @@
 ## Contacto / canales (oficiales)
 
 - **WhatsApp:** `5532400172` — ✅ CONFIRMADO (fuente: brief `cat/mp.md`, decisión del cliente 2026-08-19). El catálogo muestra `5615136270`, pero NO se usa.
-- **Correo:** Javieresp403@gmail.com
+- **Correo:** aguaartesanal2020@gmail.com
 - **Facebook:** https://www.facebook.com/profile.php?id=100071090715762 · Instagram/Redes: `@aguaartesanal`
 - **Modelo:** venta en línea 100%, conversión por WhatsApp. Sin punto de venta físico.
 

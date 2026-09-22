@@ -11,7 +11,7 @@
 - [x] Sabores, presentaciones (1 L / 500 ml) y duración coinciden con el catálogo.
 - [x] Las imágenes de sabores provienen del catálogo real (recortes).
 - [x] WhatsApp correcto: `5532400172` (enlaces `wa.me/525532400172`).
-- [x] Correo correcto: `Javieresp403@gmail.com`.
+- [x] Correo correcto: `aguaartesanal2020@gmail.com`.
 - [x] Recortes de botellas regenerados 2026-08-24 (700 px ancho, alturas variables 970–1621 px, object-fit contain) — pendiente validación visual final del cliente.
 - [ ] Pendiente de sustitución: hero y food-drink (imágenes de dirección Stitch) — re-export 2026-08-24 corrigió dimensiones a 1220×686 / 1240×743 y AVIF optimizado, pero siguen siendo dirección Stitch.
 

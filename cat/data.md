@@ -2,7 +2,7 @@
 
 Redes social: https://www.facebook.com/profile.php?id=100071090715762
 Contacto whatsapp: 5532400172
-Correo: Javieresp403@gmail.com
+Correo: aguaartesanal2020@gmail.com
 Dirección: Es venta en linea
 Preferencias de color: Blanco y azul marino
 

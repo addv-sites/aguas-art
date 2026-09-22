@@ -104,5 +104,5 @@ El deploy es **automático**: cualquier `push` a `main` dispara el workflow
 ## Contacto
 
 - WhatsApp: [5532400172](https://wa.me/525532400172)
-- Correo: Javieresp403@gmail.com
+- Correo: aguaartesanal2020@gmail.com
 - Facebook: [Agua Artesanal](https://www.facebook.com/profile.php?id=100071090715762)
